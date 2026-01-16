@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caixa bancario em JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="atm.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="funcoes">
+
+        <div class="saldo">
+            <button onclick="consultaSaldo()">Consultar Saldo</button>
+            <p>Seu saldo é de R$ <span id="exibirSaldo">_________</span></p>
+        </div>
+        <div class="deposito">
+            <button onclick="deposito()">Depositar</button>
+            <p id="campoDeposito"></p>
+            <p id="okDeposito"></p>
+            <p id="situacaoDeposito"></p>
+        </div>
+        <div class="saque">
+            <button onclick="saque()">Sacar</button>
+            <p id="campoSaque"></p>
+            <p id="okSaque"></p>
+            <p id="situacaoSaque"></p>
+        </div>
+    </div>
+
+    <script>
+        let saldo = Number.parseFloat(1000);
+
+        function consultaSaldo() {
+            document.getElementById('exibirSaldo').innerText = `${saldo}`;
+        };
+
+        function deposito() {
+            document.getElementById('campoDeposito').innerHTML = '<input type="number" id="valorDeposito">';
+            document.getElementById('okDeposito').innerHTML = '<button onclick="okDeposito()">OK Deposito</button>';
+        }
+        function okDeposito() {
+            let valorDeposito = Number(document.getElementById('valorDeposito').value);
+            saldo += valorDeposito;
+            document.getElementById('situacaoDeposito').innerText = `Deposito realizado com sucesso, seu saldo atual é R$ ${saldo}`;
+        }
+
+        function saque() {
+            document.getElementById('campoSaque').innerHTML = '<input type="number" id="valorSaque">';
+            document.getElementById('okSaque').innerHTML = '<button onclick="okSaque()">OK Saque</button>';
+        }
+
+        function okSaque() {
+            let valorSaque = Number(document.getElementById('valorSaque').value);
+            if (valorSaque > saldo) {
+                document.getElementById('situacaoSaque').innerText = `Saldo Insuficiente para Saque, seu saldo atual é R$ ${saldo}`;
+            } else {
+                saldo -= valorSaque;
+                document.getElementById('situacaoSaque').innerText = `Saque realizado com sucesso, seu saldo atual é R$ ${saldo}`;
+            }
+        }
+    </script>
+</body>
+
+</html>
