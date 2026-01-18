@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A B C</title>
+    <style>
+        label {
+            margin: 20px auto 5px auto; /* sentido horário - cima, direita, baixo, esquerda.*/
+            display: flex;
+        }
+
+        input {
+            background-color: rgb(161, 161, 161);
+            border: 1px solid black;
+        }
+
+        button {
+            display: flex;
+            margin-top: 20px;
+            background-color: aqua;
+            border: 1px solid gray;
+            border-radius: 23px;
+            width: 80px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="valor">Insira o valor de A</label>
+    <input type="number" id="valor_A" placeholder="1">
+    <label for="valor">Insira o valor de B</label>
+    <input type="number" id="valor_B" placeholder="2">
+    <label for="valor">Insira o valor de C</label>
+    <input type="number" id="valor_C" placeholder="3">
+    <button onclick="calculo()">Execute</button>
+
+    <p id="vazio"></p>
+    <script>
+        function calculo() {
+            a = Number(document.getElementById("valor_A").value);
+            b = Number(document.getElementById("valor_B").value);
+            c = Number(document.getElementById("valor_C").value);
+
+            console.log("soma entre a + b = " + a + b);
+
+            if (a + b < c) {
+                console.log("a + b é menor que c");
+            }
+
+            else {
+                console.log(`a + b é maior que c ${c}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

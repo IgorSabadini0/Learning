@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas e media</title>
+    <style>
+        body {
+            font-size: 1.6em;
+            background-color: lightgray;
+        }
+
+        .notas {
+            display: flex;
+            margin: 20px auto auto auto;
+        }
+
+        .media {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .n {
+            background-color: transparent;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="" class="notas">Nota 1</label>
+    <input type="text" placeholder="Nota 1" id="Nota 1" class="n">
+    <label for="" class="notas">Nota 2</label>
+    <input type="text" placeholder="Nota 2" id="Nota 2" class="n">
+    <label for="" class="notas">Nota 3</label>
+    <input type="text" placeholder="Nota 3" id="Nota 3" class="n">
+    <button onclick="media()" class="media">Calcular média</button>
+    <p><span id="valido"></span></p>
+    <p>Sua média é: <span id="media">__________</span></p>
+    <p>Você está <span id="resultado">__________</span></p>
+
+    <script>
+        function media() {
+            
+            let n2 = Number(document.getElementById("Nota 2").value);
+            let n3 = Number(document.getElementById("Nota 3").value);
+            let media = (n1 + n2 + n3) / 3;
+            
+            if (media >= 6) {
+                document.getElementById("resultado").innerText = "Aprovado !";
+                document.getElementById("resultado").style.color = "green";
+                document.getElementById("media").style.color = "green";
+                document.getElementById("media").innerText = media.toFixed(2);
+            }
+                        
+            else {
+                document.getElementById("resultado").innerText = "Reprovado !";
+                document.getElementById("resultado").style.color = "red";
+                document.getElementById("media").style.color = "red";
+                document.getElementById("media").innerText = media.toFixed(2);
+            }
+        }
+    </script>
+</body>
+
+</html>

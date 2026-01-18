@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velas calculo com input</title>
+</head>
+
+<body>
+    <h1>CALCULADOR DE VELAS COM DESCONTO - input</h1>
+
+    <label for="valor">Insira o valor da vela aqui</label>
+    <input id="valor" type="number">
+    <button onclick="desconto()"><span id="valorNaN">CLIQUE AQUI PARA CALCULAR</span></button>
+    <p>Valor <span id="vf">______</span></p>
+
+    <script>
+        let preco = []
+        function desconto() {
+            preco = Number(document.getElementById("valor").value);
+
+            if (preco === "") {
+                document.getElementById("valorNaN").innerText = "VALOR INVÁLIDO"
+            }
+
+            else {
+                if (preco > 50) {
+                    let valorDesconto = preco * 0.2;
+                    let precoDesc = preco - valorDesconto;
+                    document.getElementById("vf").innerText = "COM desconto R$ " + precoDesc.toFixed(2).replace('.', ',');
+                    document.getElementById("vf").style.color = "green"
+                }
+
+                else {
+                    document.getElementById("vf").innerText = "SEM desconto: R$ " + preco.toFixed(2).replace('.', ',');
+                    document.getElementById("vf").style.color = "red"
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="item">Numero para inserir na lista</label>
+    <input id="item" type="number" placeholder="digite um numero aqui">
+    <br>
+    <button onclick="lista()">CLIQUE AQUI PARA ADICIONAR ITME A LISTA</button>
+    <p>Itens lista: <span id="vL"></span></p>
+    <script>
+        function lista() {
+            for (let i = 0; i = 10; i++) {
+                let list = [];
+                let item = Number(document.getElementById("item").value);
+                list.push(item);
+                document.getElementById("vL").innerText = list;
+            }
+        }
+    </script>
+</body>
+
+</html>
