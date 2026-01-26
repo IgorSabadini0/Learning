@@ -1,34 +1,21 @@
-# Learning JavaScript and Logic
+# Logic and Web Development Lab
 
-Este repositorio e dedicado ao armazenamento dos meus exercicios de logica de programacao, estudos de JavaScript e pequenos projetos front-end desenvolvidos.
+Repositorio dedicado ao estudo de algoritmos de alta complexidade, logica de programacao e fundamentos de desenvolvimento Web. Este espaco reflete minha evolucao tecnica e capacidade de resolver problemas reais atraves de codigo limpo e eficiente.
 
+## Tecnologias e Ferramentas
+* Linguagens: JavaScript (ES6+) e Python.
+* Front-end: HTML5 semantico e CSS3.
+* Ambiente: Node.js para testes de logica via terminal.
 
-### Desafios de Logica (/exLogicaProva)
-Exercicios focados em algoritmos complexos e resolucao de problemas, incluindo:
-* Sistema de Viagem: Calculo de postos de gasolina e pontos de recarga mais distantes dentro de uma autonomia.
-* Controle de Vendas: Identificacao de maior e menor valor em listas de produtos, filtrando devolucoes.
-* Gerador de Senha Binaria: Algoritmo que identifica o digito predominante em colunas binarias para gerar uma senha decimal.
-* Carregamento de Caminhao: Filtro de pesos validos e soma total de carga.
+## Destaques de Engenharia
+Desenvolvi solucoes para desafios que exigem manipulacao avancada de dados e estruturas de controle:
 
-### Exercicios Praticos (/js/exerciciosLogica)
-Pequenos scripts para fixacao de sintaxe e logica basica:
-* Calculo de media de notas com feedback visual de aprovacao.
-* Tabuada automatizada e verificacao de numeros pares ou impares.
-* Calculo de aluguel de veiculos com base em quilometragem e dias.
-* Inversao de strings sem o uso de metodos nativos como reverse.
+* Algoritmos de Otimizacao: Sistema para identificar pontos de recarga ou postos de gasolina mais distantes dentro de uma autonomia especifica, otimizando rotas de viagem.
+* Processamento de Dados: Filtros complexos para controle de vendas e carregamento de cargas, tratando arrays multidimensionais com .flat() e ignorando entradas invalidas (devolucoes ou pesos fora do range).
+* Logica Binaria: Algoritmo para geracao de senhas decimais atraves da analise de predominancia de bits em colunas de matrizes binarias.
+* Projetos Web: Aplicacoes praticas com manipulacao de DOM, como calculadoras de IMC e simuladores de transacoes bancarias (saque e deposito) com validacao de saldo.
 
-### Projetos Web Iniciais
-Aplicacoes simples que utilizam a manipulacao do DOM:
-* Calculadora de IMC: Interface para calculo de indice de massa corporal e classificacao.
-* Simulador de Caixa Eletronico: Funcoes de saque, deposito e consulta de saldo via interface HTML.
-* Calculador de Velas: Sistema com aplicacao de descontos condicionais via input.
-
-## Tecnologias Utilizadas
-* JavaScript (ES6+): Manipulacao de arrays, loops (for, for...of), funcoes e logica condicional.
-* HTML5 e CSS3: Estruturacao e estilizacao de interfaces simples e formularios.
-* Node.js: Testes de logica via terminal utilizando bibliotecas como prompt-sync.
-
-## Notas de Estudo
-* Uso constante de .flat() para tratar arrays multidimensionais.
-* Pratica de manipulacao de tipos com Number() e parseFloat().
-* Formatacao de moeda brasileira com .toLocaleString para exibir valores em Reais.
+## Praticas de Desenvolvimento
+* Tratamento de Dados: Uso rigoroso de Number(), parseFloat() e toFixed() para precisao em calculos financeiros.
+* Clean Code: Aplicacao de funcoes bem definidas, loops otimizados (for...of, for) e tratamento de erros com throw new Error ou condicionais de seguranca.
+* Internacionalizacao: Formatacao de moedas para o padrao brasileiro (toLocaleString).
